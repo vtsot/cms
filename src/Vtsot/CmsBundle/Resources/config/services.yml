@@ -1,0 +1,18 @@
+#parameters:
+#    vtsot_cms.example.class: Vtsot\CmsBundle\Example
+
+#services:
+#    vtsot_cms.example:
+#        class: %vtsot_cms.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+parameters:
+    vtsot_cms.listener.request.class: Vtsot\CmsBundle\Listener\KernelRequestListener
+
+services:
+    vtsot_cms.listener.request:
+        class: "%vtsot_cms.listener.request.class%" 
+        arguments: 
+            - @service_container
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
