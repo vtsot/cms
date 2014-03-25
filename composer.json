@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "vtsot/cms",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "cms",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -19,6 +19,8 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0"
+        
+        
     },
     "scripts": {
         "post-install-cmd": [
@@ -37,9 +39,11 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "vendor/bin",
+        "component-dir": "web/components" 
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
