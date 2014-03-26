@@ -19,10 +19,10 @@ class AppKernel extends Kernel
             
 //            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Vtsot\CmsBundle\VtsotCmsBundle(),
-//            new Cmsot\Bundle\CmsotBundle(),
-//            new vtsot\cmsBundle\vtsotcmsBundle(),
-//            new Cmsot\CmsBundle\CmsotCmsBundle(),
-//            new vtsot\CmsBundle\vtsotCmsBundle(),
+            
+            
+            new Cms\MainBundle\CmsMainBundle(),
+            new Cms\Main2Bundle\CmsMain2Bundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

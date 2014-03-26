@@ -1,6 +1,6 @@
 <?php
 
-namespace Vtsot\CmsBundle\Controller;
+namespace Cms\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction($name)
     {
-        return $this->render('VtsotCmsBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('CmsMainBundle:Default:index.html.twig', array('name' => $name));
     }
 }

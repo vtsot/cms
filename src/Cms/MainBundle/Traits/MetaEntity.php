@@ -1,5 +1,5 @@
 <?php
-namespace Vtsot\CmsBundle\Traits;
+namespace Cms\MainBundle\Traits;
 
 /**
  * MetaEntity

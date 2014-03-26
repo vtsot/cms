@@ -1,5 +1,5 @@
 <?php
-namespace vtsot\CmsBundle\Listener;
+namespace Cms\MainBundle\Listener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\DependencyInjection\Container;

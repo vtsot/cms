@@ -1,5 +1,5 @@
 <?php
-namespace vtsot\CmsBundle\Lib;
+namespace Cms\MainBundle\Lib;
 
 /**
  * Globals

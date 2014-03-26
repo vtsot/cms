@@ -1,0 +1,11 @@
+parameters:
+    cms_main.listener.request.class: CmsMainBundle\Listener\KernelRequestListener
+
+services:
+    cms_main.listener.request:
+        class: "%cms_main.listener.request.class%" 
+        arguments: 
+            - @service_container
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+            

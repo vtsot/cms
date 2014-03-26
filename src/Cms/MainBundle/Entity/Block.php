@@ -1,5 +1,5 @@
 <?php
-namespace Vtsot\CmsBundle\Entity;
+namespace Cms\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -57,18 +57,6 @@ class Block
         return (string)$this->getName();
     }
     
-//    /**
-//     * Конструктор
-//     */
-//    public function __construct()
-//    {
-//        $this->rank = 1000;
-//        $this->swSite = true;
-//    }
-
-
-    
-
     /**
      * Get id
      *

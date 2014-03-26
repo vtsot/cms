@@ -1,6 +1,6 @@
 <?php
 
-namespace Vtsot\CmsBundle\Tests\Controller;
+namespace Cms\MainBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
