@@ -6,3 +6,8 @@ CmsMainBundlePage:
     resource: "@CmsMainBundle/Controller/Page/"
     type:     admingenerator
     prefix:   /page
+
+CmsMainBundleBlock:
+    resource: "@CmsMainBundle/Controller/Block/"
+    type:     admingenerator
+    prefix:   /block

@@ -9,7 +9,7 @@ use Cms\MainBundle\Traits as CmsBehaviors;
 
 /**
  * Block
- * @ORM\Entity(repositoryClass="CmsMainBundle\Repository\BlockRepository")
+ * @ORM\Entity(repositoryClass="Cms\MainBundle\Repository\BlockRepository")
  */
 class Block
 {

@@ -1,0 +1,52 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Cms\MainBundle\Entity\Block
+    namespace_prefix: Cms
+    concurrency_lock: ~
+    bundle_name: MainBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title:      "Все блоки"
+            display:    [ id, blockKey, name, rank, swSite ]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display:    [ blockKey, name, description, swSite ]
+    new:
+        params:
+            title:      "Добавить новый блок"
+            display:    [ blockKey, name, description, rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title:      "Обновить блок \"%object%\"|{ %object%: Block.name }|"
+            display:    [ blockKey, name, description, rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title:      "Отображение блока \"%object%\"|{ %object%: Block.name }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~
