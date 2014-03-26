@@ -1,13 +1,5 @@
-cms_main2:
-    resource: "@CmsMain2Bundle/Resources/config/routing.yml"
-    prefix:   /
+
 
 cms_main:
     resource: "@CmsMainBundle/Resources/config/routing.yml"
     prefix:   /
-
-vtsot_cms:
-    resource: "@VtsotCmsBundle/Resources/config/routing.yml"
-    prefix:   /
-
-

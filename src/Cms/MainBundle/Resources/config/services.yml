@@ -1,5 +1,5 @@
 parameters:
-    cms_main.listener.request.class: CmsMainBundle\Listener\KernelRequestListener
+    cms_main.listener.request.class: Cms\MainBundle\Listener\KernelRequestListener
 
 services:
     cms_main.listener.request:

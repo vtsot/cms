@@ -4,21 +4,22 @@ namespace Cms\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+use Admingenerator\GeneratorBundle\Traits\ValidForDelete;
+use Cms\MainBundle\Traits as CmsBehaviors;
 
 /**
  * Page
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Vtsot\CmsBundle\Repository\PageRepository")
+ * @ORM\Entity(repositoryClass="Cms\MainBundle\Repository\PageRepository")
  */
 class Page
 {
 
-//    use ORMBehaviors\Timestampable\Timestampable,
-//        ORMBehaviors\Blameable\Blameable,
-//        ORMBehaviors\SoftDeletable\SoftDeletable;
-    use \Vtsot\CmsBundle\Traits\MetaEntity;
-    use \Vtsot\CmsBundle\Traits\DisplayEntity;
-    
+    use ORMBehaviors\Timestampable\Timestampable,
+        ORMBehaviors\Blameable\Blameable,
+        ORMBehaviors\SoftDeletable\SoftDeletable,
+        ValidForDelete,
+        CmsBehaviors\MetaEntity,
+        CmsBehaviors\DisplayEntity;
     
     /**
      * @var integer
@@ -42,16 +43,10 @@ class Page
      * @Assert\Length(max=255)
      **/
     private $name;
-
-    /**
-     * @var string $about
-     * @ORM\Column(type="string", length=255, nullable=true, options={"comment"="Краткое описание"})
-     **/
-    private $about;
     
     /**
      * @var string $description
-     * @ORM\Column(type="string", length=255, nullable=true, options={"comment"="Подробное описание"})
+     * @ORM\Column(type="text", nullable=true, options={"comment"="Подробное описание"})
      **/
     private $description;
     
@@ -121,28 +116,28 @@ class Page
         return $this->name;
     }
 
-    /**
-     * Set about
-     *
-     * @param string $about
-     * @return Page
-     */
-    public function setAbout($about)
-    {
-        $this->about = $about;
-    
-        return $this;
-    }
-
-    /**
-     * Get about
-     *
-     * @return string 
-     */
-    public function getAbout()
-    {
-        return $this->about;
-    }
+//    /**
+//     * Set about
+//     *
+//     * @param string $about
+//     * @return Page
+//     */
+//    public function setAbout($about)
+//    {
+//        $this->about = $about;
+//    
+//        return $this;
+//    }
+//
+//    /**
+//     * Get about
+//     *
+//     * @return string 
+//     */
+//    public function getAbout()
+//    {
+//        return $this->about;
+//    }
 
     /**
      * Set description
@@ -166,5 +161,5 @@ class Page
     {
         return $this->description;
     }
-    
+
 }

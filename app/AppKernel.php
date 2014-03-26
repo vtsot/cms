@@ -18,11 +18,22 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             
 //            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Vtsot\CmsBundle\VtsotCmsBundle(),
+//            new Vtsot\CmsBundle\VtsotCmsBundle(),
             
-            
+            // CmsMainBundle
             new Cms\MainBundle\CmsMainBundle(),
-            new Cms\Main2Bundle\CmsMain2Bundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            
+            // admingenerator
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
+            new Millwright\MenuBundle\MillwrightMenuBundle(),
+            new Millwright\ConfigurationBundle\MillwrightConfigurationBundle(),
+            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+            new Pinano\Select2Bundle\PinanoSelect2Bundle(),
+//            new FOS\UserBundle\FOSUserBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

@@ -4,20 +4,21 @@ namespace Cms\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;
+use Admingenerator\GeneratorBundle\Traits\ValidForDelete;
+use Cms\MainBundle\Traits as CmsBehaviors;
 
 /**
  * Block
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Vtsot\CmsBundle\Repository\BlockRepository")
+ * @ORM\Entity(repositoryClass="CmsMainBundle\Repository\BlockRepository")
  */
 class Block
 {
     
-//    use ORMBehaviors\Timestampable\Timestampable,
-//        ORMBehaviors\Blameable\Blameable,
-//        ORMBehaviors\SoftDeletable\SoftDeletable;
-    use \Vtsot\CmsBundle\Traits\MetaEntity;
-    use \Vtsot\CmsBundle\Traits\DisplayEntity;
+    use ORMBehaviors\Timestampable\Timestampable,
+        ORMBehaviors\Blameable\Blameable,
+        ORMBehaviors\SoftDeletable\SoftDeletable,
+        ValidForDelete,
+        CmsBehaviors\DisplayEntity;
      
     /**
      * @var integer
@@ -44,7 +45,7 @@ class Block
     
     /**
      * @var string $description
-     * @ORM\Column(type="string", length=255, nullable=true, options={"comment"="Подробное описание"})
+     * @ORM\Column(type="text", nullable=true, options={"comment"="Подробное описание"})
      **/
     private $description;
     
@@ -135,5 +136,5 @@ class Block
     {
         return $this->description;
     }
-    
+
 }

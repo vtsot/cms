@@ -3,7 +3,7 @@ namespace Cms\MainBundle\Listener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\DependencyInjection\Container;
-use Vtsot\CmsBundle\Lib\Globals;
+use Cms\MainBundle\Lib\Globals;
 
 /**
  * @Service
