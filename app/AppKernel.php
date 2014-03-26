@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             
+//            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Vtsot\CmsBundle\VtsotCmsBundle(),
 //            new Cmsot\Bundle\CmsotBundle(),
 //            new vtsot\cmsBundle\vtsotcmsBundle(),

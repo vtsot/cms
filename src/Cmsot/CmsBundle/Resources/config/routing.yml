@@ -1,3 +1,0 @@
-cmsot_cms_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: CmsotCmsBundle:Default:index }

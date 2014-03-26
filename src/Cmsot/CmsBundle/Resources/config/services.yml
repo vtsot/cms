@@ -1,7 +1,0 @@
-parameters:
-#    cmsot_cms.example.class: Cmsot\CmsBundle\Example
-
-services:
-#    cmsot_cms.example:
-#        class: %cmsot_cms.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
