@@ -1,0 +1,59 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Cms\MainBundle\Entity\Page
+    namespace_prefix: Cms
+    concurrency_lock: ~
+    bundle_name: MainBundle
+    pk_requirement: ~
+    fields:
+        id:             { label: "ID" }
+        url:            { label: "Url" }
+        name:           { label: "Название страницы" }
+        rank:           { label: "Сортировка" }
+        swSite:         { label: "Отображение" }
+        description:    { label: "Текст страницы" }
+        updatedAt:      { label: "Обновлено" }
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title:      "Все страницы"
+            display:    [ id, url, name, rank, swSite ]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display:    [ id, url, name, swSite, description ]
+    new:
+        params:
+            title:      "Добавить новую страницу"
+            display:    [ url, name, metaTitle, metaKeywords, metaDescription, description, rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title:      "Редактировать страницу \"%object%\"|{ %object%: Page.name }|"
+            display:    [ url, name, metaTitle, metaKeywords, metaDescription, description, rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title:      "Отображение страницы \"%object%\"|{ %object%: Page.name }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~
