@@ -4,8 +4,6 @@ namespace Cms\MainBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-// use Nitra\OrderBundle\Entity\OrderStatus;
-// use Nitra\OrderBundle\Entity\OrderEntryStatus;
 use Cms\MainBundle\Entity\Page;
 
 /**

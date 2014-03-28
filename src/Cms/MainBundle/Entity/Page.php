@@ -50,7 +50,6 @@ class Page
      **/
     private $description;
     
-    
     /**
      * object to string
      * @return string
@@ -115,29 +114,6 @@ class Page
     {
         return $this->name;
     }
-
-//    /**
-//     * Set about
-//     *
-//     * @param string $about
-//     * @return Page
-//     */
-//    public function setAbout($about)
-//    {
-//        $this->about = $about;
-//    
-//        return $this;
-//    }
-//
-//    /**
-//     * Get about
-//     *
-//     * @return string 
-//     */
-//    public function getAbout()
-//    {
-//        return $this->about;
-//    }
 
     /**
      * Set description
