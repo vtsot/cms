@@ -30,27 +30,11 @@ class AppKernel extends Kernel
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new Pinano\Select2Bundle\PinanoSelect2Bundle(),
             
-            // vtsot cms 
+            // vtsot/cms 
+            new Vtsot\CmsBundle\VtsotCmsBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            
-////            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-////            new Vtsot\CmsBundle\VtsotCmsBundle(),
-//            
-//            // CmsMainBundle
-//            new Cms\MainBundle\CmsMainBundle(),
-//            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-//            
-//            // admingenerator
-//            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-//            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-//            new Admingenerator\GeneratorBundle\AdmingeneratorGeneratorBundle(),
-//            new Millwright\MenuBundle\MillwrightMenuBundle(),
-//            new Millwright\ConfigurationBundle\MillwrightConfigurationBundle(),
-//            new Genemu\Bundle\FormBundle\GenemuFormBundle(),
-//            new Pinano\Select2Bundle\PinanoSelect2Bundle(),
-////            new FOS\UserBundle\FOSUserBundle(),
             
         );
 

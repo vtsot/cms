@@ -1,0 +1,3 @@
+vtsot_cms_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: VtsotCmsBundle:Default:index }

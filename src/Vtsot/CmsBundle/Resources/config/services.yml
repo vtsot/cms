@@ -1,0 +1,7 @@
+parameters:
+#    vtsot_cms.example.class: Vtsot\CmsBundle\Example
+
+services:
+#    vtsot_cms.example:
+#        class: %vtsot_cms.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

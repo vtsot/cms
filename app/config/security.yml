@@ -52,24 +52,24 @@ security:
             #    realm: "Secured Demo Area"
 
     access_control:
-        # сохранение заказов с сайта в тетрадку
-        - { path: ^/create-order-from-site, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # получение инфы с сайта по покупателю
-        - { path: ^/get-buyer-info-site, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # синхронизация покупателей (ORM -> ODM)
-        - { path: ^/order/buyers-synchronizer, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # принять отредактированные пользователем данные и обновить (редактирование в личном кабинете)
-        - { path: ^/order/update-buyer, role: IS_AUTHENTICATED_ANONYMOUSLY }        
-        # получение json-массива всех городов
-        - { path: ^/city/get-all-cities, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # получение json-массива всех валют
-        - { path: ^/currency/get-all-currencies, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # получение городов в которые осуществляется доставка
-        - { path: ^/city/get-delivery-cities, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # получение складов в которые осуществляется доставка
-        - { path: ^/city/get-delivery-warehouses, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        # получить ближайший склад на котором нажодится продкут
-        - { path: ^/order/get-closest-warehouse-for-product, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # сохранение заказов с сайта в тетрадку
+#        - { path: ^/create-order-from-site, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # получение инфы с сайта по покупателю
+#        - { path: ^/get-buyer-info-site, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # синхронизация покупателей (ORM -> ODM)
+#        - { path: ^/order/buyers-synchronizer, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # принять отредактированные пользователем данные и обновить (редактирование в личном кабинете)
+#        - { path: ^/order/update-buyer, role: IS_AUTHENTICATED_ANONYMOUSLY }        
+#        # получение json-массива всех городов
+#        - { path: ^/city/get-all-cities, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # получение json-массива всех валют
+#        - { path: ^/currency/get-all-currencies, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # получение городов в которые осуществляется доставка
+#        - { path: ^/city/get-delivery-cities, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # получение складов в которые осуществляется доставка
+#        - { path: ^/city/get-delivery-warehouses, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        # получить ближайший склад на котором нажодится продкут
+#        - { path: ^/order/get-closest-warehouse-for-product, role: IS_AUTHENTICATED_ANONYMOUSLY }
         # авторизация
         - { path: ^/.*/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/.*/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
