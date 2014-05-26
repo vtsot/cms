@@ -1,37 +1,18 @@
 {% extends "AdmingeneratorGeneratorBundle::base_admin.html.twig" %}
 
-        {% block javascript_head %}
-            {% javascripts
-                'components/jquery/jquery.js'           
-                '@AdmingeneratorGeneratorBundle/Resources/public/js/jquery-ui-1.10.3.custom.js'
-                '@AdmingeneratorGeneratorBundle/Resources/public/js/common.js'
-                '@AdmingeneratorGeneratorBundle/Resources/public/js/menu.js'
-                '@AdmingeneratorGeneratorBundle/Resources/public/js/jquery.colorbox.js'
-                '@AdmingeneratorGeneratorBundle/Resources/public/js/jquery.nl-admin-tab.js'
-                '@PinanoSelect2Bundle/Resources/public/js/select2.min.js' %}
-                <script src="{{ asset_url }}"></script> 
-                
-                
-            {% endjavascripts %}
-            
-            {# Календарь перевод и select2 #}
-            {% if app.request.locale == 'ru' %}
-                {% javascripts
-                    '@AdmingeneratorGeneratorBundle/Resources/public/js/i18n/jquery.ui.datepicker-ru.js'
-                    '@PinanoSelect2Bundle/Resources/public/js/select2_locale_ua.js' %}
-                    <script src="{{ asset_url }}"></script>
-                {% endjavascripts %}        
-            {% elseif app.request.locale == 'uk' %}        
-                {% javascripts
-                    '@AdmingeneratorGeneratorBundle/Resources/public/js/i18n/jquery.ui.datepicker-uk.js'
-                    '@PinanoSelect2Bundle/Resources/public/js/select2_locale_ua.js' %}
-                    <script src="{{ asset_url }}"></script>
-                {% endjavascripts %}        
-            {% endif %}
-            
-            {# Для select2 #}
-            {% if form is defined and form != false %}
-                {{ form_javascript(form) }}    
-            {% endif %}
-                    
-        {% endblock %}
+{% block title %}Mini Тетрадка{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets       
+        'bundles/nitraminitetradka/css/admin.less' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascript_head %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+{% endblock %}
+

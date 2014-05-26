@@ -2,14 +2,14 @@
     "name": "vtsot/cms",
     "license": "MIT",
     "type": "project",
-    "description": "cms",
+    "description": "vtsotcms",
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
+        "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
         "symfony/assetic-bundle": "2.3.*",
@@ -20,9 +20,13 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
         
-        "nitra/admingenerator-generator-bundle": "dev-master",
+        "jms/di-extra-bundle": "1.4.*dev",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "1.3.2",
+        "friendsofsymfony/jsrouting-bundle": "1.1.*@dev",
         "nitra/doctrine-behaviors": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master"
+        "nitra/admingenerator-generator-bundle": "dev-master"
+        
     },
     "scripts": {
         "post-install-cmd": [

@@ -1,7 +1,17 @@
-
-
-
-
-cms_main:
-    resource: "@CmsMainBundle/Resources/config/routing.yml"
+vtsot_cms:
+    resource: "@VtsotCmsBundle/Resources/config/routing.yml"
     prefix:   /
+
+root:
+    pattern: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /demo
+        permanent: true    
+
+
+
+
+#cms_main:
+#    resource: "@CmsMainBundle/Resources/config/routing.yml"
+#    prefix:   /
