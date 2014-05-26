@@ -2,13 +2,25 @@
 app/bootstrap*
 
 # Symfony directories
+build/*
 vendor/*
+bin/*
+components/*
 */logs/*
 */cache/*
+*gitkeep*
 web/uploads/*
 web/bundles/*
+web/assetic/*
 web/components/*
+web/css/*
+web/js/*
 
 # Configuration files
 app/config/parameters.ini
 app/config/parameters.yml
+
+# edit history files
+*~
+
+/web/app_dev.php
