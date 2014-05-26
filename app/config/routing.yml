@@ -1,0 +1,4 @@
+vtsot_cms:
+    resource: "@VtsotCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+

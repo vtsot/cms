@@ -1,0 +1,57 @@
+millwright_menu:
+    renderers:
+        navigation: #menu type id
+            renderer: null # custom renderer
+            rendererOptions:
+                template: MillwrightMenuBundle:Default:knp_menu.html.twig
+                ancestorClass: current active
+                currentClass: current_item
+
+    items: #menu items
+    
+#        order:
+#            label: "Заказы"
+#        order_list:
+#            label: "Список заказов"
+#            route: Nitra_MiniTetradkaBundle_Order_list
+#        order_new:
+#            label: "Новый заказ"
+#            route: Nitra_MiniTetradkaBundle_Order_new
+#            
+#        buyer:
+#            label: "Клиенты"
+#            route: Nitra_MiniTetradkaBundle_Buyer_list
+#        
+#        catalog: 
+#            label: "Справочники"
+#            
+#        region:
+#            label: "Регионы"
+#            route: Nitra_GeoBundle_Region_list    
+#        city:
+#            label: "Города"
+#            route: Nitra_GeoBundle_City_list
+#            
+#        currency:
+#            label: "Валюты"
+#            route: Nitra_MiniTetradkaBundle_Currency_list
+    
+    tree: #menu containers
+        main: #main container
+            type: navigation # menu type id
+            children:
+                
+#                order:
+#                    type: navigation
+#                    children:
+#                         order_list: ~
+#                         order_new: ~
+#                         
+#                catalog:
+#                    type: navigation
+#                    children:
+#                        buyer:      ~
+#                        region:     ~
+#                        city:       ~
+#                        currency:   ~
+            
