@@ -1,0 +1,81 @@
+millwright_menu:
+    renderers:
+        navigation: #menu type id
+            renderer: null # custom renderer
+            rendererOptions:
+                template: MillwrightMenuBundle:Default:knp_menu.html.twig
+                ancestorClass: current active
+                currentClass: current_item
+
+    items: #menu items        
+        
+        # Страницы 
+        page:
+            label:  "Страницы"
+        page_list:
+            label:  "Все страницы"
+            route:  Vtsot_CmsBundle_Page_list
+        page_new:
+            label:  "Новая страница"
+            route:  Vtsot_CmsBundle_Page_new
+            
+        # Блоки 
+        block:
+            label:  "Блоки"
+        block_list:
+            label:  "Все блоки"
+            route:  Vtsot_CmsBundle_Block_list
+        block_new:
+            label:  "Новый блок"
+            route:  Vtsot_CmsBundle_Block_new
+            
+        # Изображения 
+        image:
+            label:  "Изображения"
+        image_list:
+            label:  "Все изображения"
+            route:  Vtsot_CmsBundle_Image_list
+        image_new:
+            label:  "Новое изображение"
+            route:  Vtsot_CmsBundle_Image_new
+            
+        # Пользователи 
+        user:
+            label:  "Пользователи"
+        user_list:
+            label:  "Все пользователи"
+            route:  Vtsot_CmsBundle_User_list
+        user_new:
+            label:  "Новый пользователь"
+            route:  Vtsot_CmsBundle_User_new
+            
+#        manager:
+#            label: 'Менеджеры'
+#            route: Nitra_ManagerBundle_Manager_list
+#            roles: [ ROLE_ADMIN, ROLE_SUPER_ADMIN, ROLE_ADMIN_FILIAL ]
+            
+    tree: #menu containers
+        main: #main container
+            type: navigation # menu type id
+            children:
+                page:
+                    type: navigation
+                    children:
+                        page_list: ~
+                        page_new: ~
+                block:
+                    type: navigation
+                    children:
+                        block_list: ~
+                        block_new: ~
+                image:
+                    type: navigation
+                    children:
+                        image_list: ~
+                        image_new: ~
+                user:
+                    type: navigation
+                    children:
+                        user_list: ~
+                        user_new: ~
+                        

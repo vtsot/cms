@@ -1,3 +1,24 @@
+
+VtsotCmsBundlePage:
+    resource: "@VtsotCmsBundle/Controller/Page/"
+    type:     admingenerator
+    prefix:   /admin/page
+
+VtsotCmsBundleImage:
+    resource: "@VtsotCmsBundle/Controller/Image/"
+    type:     admingenerator
+    prefix:   /admin/image
+    
+VtsotCmsBundleBlock:
+    resource: "@VtsotCmsBundle/Controller/Block/"
+    type:     admingenerator
+    prefix:   /admin/block
+
+VtsotCmsBundleUser:
+    resource: "@VtsotCmsBundle/Controller/User/"
+    type:     admingenerator
+    prefix:   /admin/user
+
 vtsot_cms_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: VtsotCmsBundle:Default:index }

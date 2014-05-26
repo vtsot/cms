@@ -1,0 +1,56 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Vtsot\CmsBundle\Entity\Image
+    namespace_prefix: Vtsot
+    concurrency_lock: ~
+    bundle_name: CmsBundle
+    pk_requirement: ~
+    fields:
+        id:             { label: "ID" }
+        name:           { label: "Название" }
+        title:          { label: "Title" }
+        rank:           { label: "Сортировка" }
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title:      "Список изображений"
+            display:    [ id, originalName, thumb3, rank ]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display: [ id, name ]
+    new:
+        params:
+            title:      "Добавить изображение"
+            display:    [ name, title, rank ]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title:      "Редактировать изображение \"%object%\"|{ %object%: Image.name }|"
+            display:    [ name, title, rank ]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title:      "Данные изображения \"%object%\"|{ %object%: Image.name }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

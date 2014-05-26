@@ -3,7 +3,7 @@ imports:
     - { resource: security.yml }
     
     # admingenerator
-    - { resource: menu.yml }
+    - { resource: menu_admin.yml }
     - { resource: ../../vendor/nitra/doctrine-behaviors/config/orm-services.yml }
 
 framework:

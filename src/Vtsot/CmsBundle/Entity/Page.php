@@ -27,7 +27,7 @@ class Page
     private $id;
 
     /**
-     * @var string $name
+     * @var string $url
      * @ORM\Column(type="string", length=255, nullable=true, options={"comment"="Url"})
      * @Assert\Length(max=255)
      **/

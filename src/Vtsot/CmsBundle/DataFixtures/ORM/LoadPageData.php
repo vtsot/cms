@@ -32,11 +32,11 @@ class LoadPageData extends AbstractFixture implements OrderedFixtureInterface
         $page->setMetaTitle('Мета title index');
         $page->setMetaKeywords('Мета keywords index');
         $page->setMetaDescription('Мета description index');
-        $page->setAbout('Краткое описание главной страницы сайта <br />'
-            . 'Краткое описание главной страницы сайта <br />'
-            . 'Краткое описание главной страницы сайта <br />'
-            . 'Краткое описание главной страницы сайта <br />'
-            );
+//        $page->setAbout('Краткое описание главной страницы сайта <br />'
+//            . 'Краткое описание главной страницы сайта <br />'
+//            . 'Краткое описание главной страницы сайта <br />'
+//            . 'Краткое описание главной страницы сайта <br />'
+//            );
         $page->setDescription('Подробное описание главной страницы сайта <br />'
             . 'Подробное описание главной страницы сайта <br />'
             . 'Подробное описание главной страницы сайта <br />'
@@ -58,11 +58,11 @@ class LoadPageData extends AbstractFixture implements OrderedFixtureInterface
         $page->setMetaTitle('Мета title about');
         $page->setMetaKeywords('Мета keywords about');
         $page->setMetaDescription('Мета description about');
-        $page->setAbout('Краткое описание страницы "О нас" <br />'
-            . 'Краткое описание страницы "О нас" <br />'
-            . 'Краткое описание страницы "О нас" <br />'
-            . 'Краткое описание страницы "О нас" <br />'
-            );
+//        $page->setAbout('Краткое описание страницы "О нас" <br />'
+//            . 'Краткое описание страницы "О нас" <br />'
+//            . 'Краткое описание страницы "О нас" <br />'
+//            . 'Краткое описание страницы "О нас" <br />'
+//            );
         $page->setDescription('Подробное описание страницы "О нас" <br />'
             . 'Подробное описание страницы "О нас" <br />'
             . 'Подробное описание страницы "О нас" <br />'

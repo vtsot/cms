@@ -1,0 +1,52 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Vtsot\CmsBundle\Entity\User
+    namespace_prefix: Vtsot
+    concurrency_lock: ~
+    bundle_name: CmsBundle
+    pk_requirement: ~
+    fields: ~
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title:      "Список пользователей"
+            display:    [ id, username, email ]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display:    [ id, username, email ]
+    new:
+        params:
+            title:      "Добавить пользователя"
+            display:    [ username, email ]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title:      "Редактировать пользователя \"%object%\"|{ %object%: User.username }|"
+            display:    [ username, email ]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title:      "Данные пользователя \"%object%\"|{ %object%: User.username }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~

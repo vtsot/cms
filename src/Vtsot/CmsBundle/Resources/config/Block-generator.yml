@@ -1,0 +1,62 @@
+generator: admingenerator.generator.doctrine
+params:
+    model: Vtsot\CmsBundle\Entity\Block
+    namespace_prefix: Vtsot
+    concurrency_lock: ~
+    bundle_name: CmsBundle
+    pk_requirement: ~
+    fields:
+        id:             { label: "ID" }
+        blockKey:       { label: "Ключ" }
+        name:           { label: "Название" }
+        description:    { label: "Описание" }
+        rank:           { label: "Сортировка" }
+        swSite:         { label: "Отображение на сайте" }
+    object_actions:
+        delete: ~
+    batch_actions:
+        delete: ~
+builders:
+    list:
+        params:
+            title:      "Список блоков"
+            display:    [ id, blockKey, name, rank, swSite ]
+            actions:
+                new: ~
+            object_actions:
+                edit: ~
+                delete: ~
+    filters:
+        params:
+            display:    [ blockKey, name, description ]
+    new:
+        params:
+            title:      "Добавить блок"
+            display:
+                "Block Data":   [ blockKey, name, description ]
+                "Display Data": [ rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    edit:
+        params:
+            title:      "Редактировать блок \"%object%\"|{ %object%: Block.blockKey }|"
+            display:
+                "Block Data":   [ blockKey, name, description ]
+                "Display Data": [ rank, swSite ]
+            actions:
+                save: ~
+                list: ~
+    show:
+        params:
+            title:      "Данные блока \"%object%\"|{ %object%: Block.blockKey }|"
+            display: ~
+            actions:
+                list: ~
+                new: ~
+    actions:
+        params:
+            object_actions:
+                delete: ~
+            batch_actions:
+                delete: ~
