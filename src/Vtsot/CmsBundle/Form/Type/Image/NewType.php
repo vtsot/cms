@@ -1,12 +1,12 @@
 <?php
-
 namespace Vtsot\CmsBundle\Form\Type\Image;
 
-use Admingenerated\VtsotCmsBundle\Form\BaseImageType\NewType as BaseNewType;
+use Vtsot\CmsBundle\Form\Type\Image\EditType as BaseNewType;
 
 /**
  * NewType
  */
 class NewType extends BaseNewType
 {
+    
 }
