@@ -14,7 +14,7 @@ builders:
     list:
         params:
             title:      "Список пользователей"
-            display:    [ id, username, email ]
+            display:    [ id, username, email, roles ]
             actions:
                 new: ~
             object_actions:
